@@ -28,4 +28,4 @@ PDT How to run?
     
 PDT Reference :
 --------------
-* You can refer to PDT on our Developer Portal by clicking here.
+* More information on PDT can be found <a href="https://developer.paypal.com/webapps/developer/docs/classic/ipn/integration-guide/IPNPDTAnAlternativetoIPN/">here</a>.
