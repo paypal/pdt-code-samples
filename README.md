@@ -28,4 +28,4 @@ PDT How to run?
     
 PDT Reference :
 --------------
-* You can refer PDT at [https://www.x.com/developers/paypal/documentation-tools/paypal-code-samples#paymentdatatransfer]
+* More information on PDT can be found <a href="https://developer.paypal.com/webapps/developer/docs/classic/ipn/integration-guide/IPNPDTAnAlternativetoIPN/">here</a>.
