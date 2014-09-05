@@ -42,7 +42,7 @@ if(!$res){
     $firstname = $keyarray['first_name'];
     $lastname = $keyarray['last_name'];
     $itemname = $keyarray['item_name'];
-    $amount = $keyarray['payment_gross'];
+    $amount = $keyarray['mc_gross'];
      
     echo ("<p><h3>Thank you for your purchase!</h3></p>");
      
