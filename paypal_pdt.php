@@ -27,13 +27,13 @@ if(!$res){
     //HTTP ERROR
 }else{
      // parse the data
-    $lines = explode("\n", $res);
+    $lines = explode("\n", trim($res));
     $keyarray = array();
     if (strcmp ($lines[0], "SUCCESS") == 0) {
-        for ($i=1; $i<count($lines);$i++){
-        list($key,$val) = explode("=", $lines[$i]);
-        $keyarray[urldecode($key)] = urldecode($val);
-    }
+        for ($i = 1; $i < count($lines); $i++) {
+            $temp = explode("=", $lines[$i],2);
+            $keyarray[urldecode($temp[0])] = urldecode($temp[1]);
+        }
     // check the payment_status is Completed
     // check that txn_id has not been previously processed
     // check that receiver_email is your Primary PayPal email
