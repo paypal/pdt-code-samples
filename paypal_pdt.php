@@ -30,10 +30,14 @@ if(!$res){
     $lines = explode("\n", $res);
     $keyarray = array();
     if (strcmp ($lines[0], "SUCCESS") == 0) {
-        for ($i=1; $i<count($lines);$i++){
-        list($key,$val) = explode("=", $lines[$i]);
-        $keyarray[urldecode($key)] = urldecode($val);
-    }
+		for ($i=1; $i<count($lines); $i++)
+		{
+			if ( strpos($lines[$i],'=') !== false )
+			{
+				list($key,$val) = explode("=", $lines[$i]);
+				$keyarray[urldecode($key)] = urldecode($val);
+			}
+		}
     // check the payment_status is Completed
     // check that txn_id has not been previously processed
     // check that receiver_email is your Primary PayPal email
@@ -42,7 +46,7 @@ if(!$res){
     $firstname = $keyarray['first_name'];
     $lastname = $keyarray['last_name'];
     $itemname = $keyarray['item_name'];
-    $amount = $keyarray['payment_gross'];
+    $amount = $keyarray['mc_gross'];
      
     echo ("<p><h3>Thank you for your purchase!</h3></p>");
      
